@@ -12,11 +12,17 @@ let count2 = 0;
 let draw = () => {
     context.clearRect(0, 0, w, h);
     context.fillRect(0, 0, x, y);
-    x++;
-    y++;
     requestAnimationFrame(draw);
     count ++;
 }
+
+setInterval(
+    function(){
+        x++;
+        y++;
+    },
+    10
+);
 
 setInterval(
     function(){
